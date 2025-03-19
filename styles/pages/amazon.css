@@ -18,17 +18,28 @@
   .products-grid {
     grid-template-columns: repeat(6, 1fr);
   }
+  .filters-panel {
+    max-width:80%;
+  }
 }
 
 @media (max-width: 1300px) {
   .products-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+
 }
 
 @media (max-width: 1000px) {
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .filters-panel {
+    max-width:20%
+  }
+
+  .filters-panel input[type = 'number']{
+    width:50px;
   }
 }
 
