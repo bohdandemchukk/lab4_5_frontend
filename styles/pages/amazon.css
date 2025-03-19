@@ -232,11 +232,52 @@
   max-width:400px;
   max-height:200px;
 }
-.close-button {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+
+.apply-filters {
+  color: rgb(33, 33, 33);
+  background-color: rgb(255, 216, 20);
+  border: 1px solid rgb(252, 210, 0);
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+
+  height:50px;
+  margin-top:30px;
+  width:100px;
+  border-radius: 20px;
+}
+
+.apply-filters:hover {
+  background-color: rgb(247, 202, 0);
+  border: 1px solid rgb(242, 194, 0);
+}
+
+.apply-filters:active {
+  background: rgb(255, 216, 20);
+  border-color: rgb(252, 210, 0);
+  box-shadow: none;
+}
+
+.category-filter, .min-price, .max-price {
+  color: rgb(33, 33, 33);
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(213, 217, 217);
+  border-radius: 8px;
+  padding: 3px 5px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.category-filter:focus, .min-price:focus, .max-price:focus {
+  outline: 2px solid rgb(255, 153, 0);
+}
+
+.filter-category {
+  margin-bottom:50px;
+}
+
+.filters-panel h3 {
+  margin-bottom:50px;
 }
 

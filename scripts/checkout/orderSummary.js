@@ -1,8 +1,16 @@
 import {cart, updateDeliveryOption, deleteFromSummary, getCartQuantity, updateQuantity} from "../../data/cart.js";
-import {products} from "../../data/products.js"
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 import {deliveryOptions} from "../../data/deliveryOptions.js"
 import {renderPaymentSummary} from "./paymentSummary.js";
+import {loadProducts} from "../../data/products.js";
+
+let products = [];
+
+await (async () => {
+    products = await loadProducts();
+    console.log(products);
+})();
+
 
 export function renderOrderSummary() {
 
