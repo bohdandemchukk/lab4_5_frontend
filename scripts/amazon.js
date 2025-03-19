@@ -2,9 +2,6 @@ import {cart, addToCart, showAdded, getCartQuantity} from "../data/cart.js"
 import {products} from "../data/products.js"
 
 
-
-
-
 let productsHTML = '';
 
 products.forEach((product) => {
@@ -156,6 +153,8 @@ function renderFilteredProducts(filteredProducts) {
           </button>
         </div>
 `;
+
+
     });
 
   }
@@ -169,8 +168,51 @@ function renderFilteredProducts(filteredProducts) {
       showAdded(productId);
     });
   });
+
+  renderImageListeners(filteredProducts)
 }
 
+
+const modal = document.querySelector('.product-modal');
+const modalImage = document.querySelector('.modal-image');
+const modalName = document.querySelector('.modal-name');
+const modalDescription = document.querySelector('.modal-description');
+const modalPrice = document.querySelector('.modal-price');
+
+
+
+function openModal(product) {
+
+  console.log(`open modal works ${product.id}`)
+  modal.classList.add("modal-visible")
+  modalImage.src = product.image;
+  modalName.innerText = product.name;
+  modalDescription.innerText = product.description || "No description available";
+  modalPrice.innerText = (product.priceCents / 100).toFixed(2);
+}
+
+function closeModal() {
+  modal.classList.remove("modal-visible")
+}
+
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+
+function renderImageListeners(products)
+{
+  document.querySelectorAll('.product-image').forEach((image, index) => {
+    image.addEventListener('click', () => {
+      const product = products[index];
+      openModal(product);
+    });
+  });
+}
+
+renderImageListeners(products)
 
 
 

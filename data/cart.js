@@ -24,9 +24,6 @@ export function addToCart(productId) {
         })
     }
 
-
-
-
     document.querySelector(".cart-quantity").innerHTML = getCartQuantity();
     localStorage.setItem("cart", JSON.stringify(cart))
 }

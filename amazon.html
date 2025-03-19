@@ -3,17 +3,15 @@
   <head>
     <title>Amazon Project</title>
 
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load a font called Roboto from Google Fonts. -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Here are the CSS files for this page. -->
+
     <link rel="stylesheet" href="styles/shared/general.css">
     <link rel="stylesheet" href="styles/shared/amazon-header.css">
     <link rel="stylesheet" href="styles/pages/amazon.css">
@@ -62,11 +60,29 @@
           <label>Max: <input type="number" class="max-price" placeholder="1000"></label><br>
           <button class="apply-filters">Apply</button>
         </div>
+        </div>
 
-        <div class="products-grid js-products-grid">
+
+
+      <div class="products-grid js-products-grid">
+      </div>
+
+    </div>
+
+    <div class="product-modal">
+      <div class="modal-content">
+        <div class="modal-product-image">
+          <img class="modal-image" src="" alt="Product Image">
+        </div>
+        <div class="modal-product-description">
+          <h2 class="modal-name"></h2>
+          <p class="modal-description"></p>
+          <p><strong>Price: </strong>$<span class="modal-price"></span></p>
+        </div>
       </div>
     </div>
-    </div>
+
+
 
 
   <script type = "module" src = "scripts/amazon.js">
