@@ -37,6 +37,8 @@ export function showAdded(productId){
         cartState[productId] = {timeoutId: null}
     }
 
+    console.log(cartState[productId])
+
     document.querySelector(`.added-to-cart-${productId}`).style.opacity = "1";
 
 
@@ -47,8 +49,9 @@ export function showAdded(productId){
     cartState[productId].timeoutId = setTimeout(() => {
         document.querySelector(`.added-to-cart-${productId}`).style.opacity = "0";
     }, 1000);
-
 }
+
+
 
 export function deleteFromSummary(productId) {
     let newCart = [];
